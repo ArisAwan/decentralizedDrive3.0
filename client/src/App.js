@@ -6,6 +6,7 @@ import Display from "./components/Display";
 import Modal from "./components/Modal";
 import "./App.css";
 
+
 function App() {
   const [account, setAccount] = useState("");
   const [contract, setContract] = useState(null);
@@ -28,7 +29,7 @@ function App() {
         const signer = provider.getSigner();
         const address = await signer.getAddress();
         setAccount(address);
-        let contractAddress = "Your Contract Address Here";
+        let contractAddress = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
         const contract = new ethers.Contract(
           contractAddress,
@@ -57,9 +58,9 @@ function App() {
 
       <div className="App">
         <h1 style={{ color: "white" }}>Gdrive 3.0</h1>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
+        <div className="bg"></div>
+        <div className="bg bg2"></div>
+        <div className="bg bg3"></div>
 
         <p style={{ color: "white" }}>
           Account : {account ? account : "Not connected"}
